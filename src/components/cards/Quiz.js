@@ -165,34 +165,37 @@ export default class Quiz extends React.Component {
         </Animated.View>
 
         {/* Back side of the Card */}
-        <Animated.View style={[
-          backAnimatedStyle,
-          view.card, view.cardQuiz, view.cardQuizBack,
-          { height: cardSize.height, width: cardSize.width },
-          isFront && display.none
-        ]}>
-          <View>
-            <Text style={text.cardHeader}>{index + 1} / {selectedDeck.cardCount}</Text>
-          </View>
+        { !isFront &&
+          <Animated.View style={[
+            backAnimatedStyle,
+            view.card, view.cardQuiz, view.cardQuizBack,
+            { height: cardSize.height, width: cardSize.width },
+            isFront && display.none
+          ]}>
+            <View>
+              <Text style={text.cardHeader}>{index + 1} / {selectedDeck.cardCount}</Text>
+            </View>
 
-          <View style={align.center}>
-            <Text style={text.cardBody}>{currentCard.answer}</Text>
-            <TouchableWithoutFeedback>
-              <View style={btn.flip}>
-                <Text style={text.btnFlip} onPress={() => this.flipCard()}>Question</Text>
-              </View>
-            </TouchableWithoutFeedback>
-          </View>
+            <View style={align.center}>
+              <Text style={text.cardBody}>{currentCard.answer}</Text>
+              <TouchableWithoutFeedback>
+                <View style={btn.flip}>
+                  <Text style={text.btnFlip} onPress={() => this.flipCard()}>Question</Text>
+                </View>
+              </TouchableWithoutFeedback>
+            </View>
 
-          <View style={align.center}>
-            <TouchableOpacity style={[btn.primary, margin('bottom')(5)]} disabled={buttonDisabled} onPress={this.onPressCorrectBtn}>
-              <Text style={text.btn}>Correct</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={btn.secondary} disabled={buttonDisabled} onPress={this.onPressIncorrectBtn}>
-              <Text style={text.btn}>Incorrect</Text>
-            </TouchableOpacity>
-          </View>
-        </Animated.View>
+            <View style={align.center}>
+              <TouchableOpacity style={[btn.primary, margin('bottom')(5)]} disabled={buttonDisabled} onPress={this.onPressCorrectBtn}>
+                <Text style={text.btn}>Correct</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={btn.secondary} disabled={buttonDisabled} onPress={this.onPressIncorrectBtn}>
+                <Text style={text.btn}>Incorrect</Text>
+              </TouchableOpacity>
+            </View>
+          </Animated.View>
+        }
+
 
       </View>
     )

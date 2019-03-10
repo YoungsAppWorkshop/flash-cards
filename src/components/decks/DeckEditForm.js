@@ -127,7 +127,7 @@ class DeckEditForm extends React.Component {
               <View style={[btn.small, margin('right')(10)]}>
                 <Text style={text.btnSmall}>
                   { Platform.OS === 'ios' ?
-                    <Ionicons name='ios-trash-outline' size={30} /> :
+                    <Ionicons name='ios-trash' size={30} /> :
                     <MaterialIcons name='delete' size={30} />
                   }
                 </Text>
