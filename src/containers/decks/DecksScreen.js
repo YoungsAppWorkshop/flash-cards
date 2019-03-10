@@ -40,16 +40,6 @@ class DecksScreen extends React.Component {
     navigation: PropTypes.object.isRequired,
   }
 
-  // Define StackNavigator options for the screen
-  static navigationOptions = {
-    title: 'Decks',
-    headerTintColor: white,
-    headerStyle: {
-      backgroundColor: primary,
-      marginTop: -Constants.statusBarHeight,
-    }
-  }
-
   // Set LocalNotification on componentDidMount
   componentDidMount() {
     const { actions, isNotificationSet } = this.props

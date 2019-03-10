@@ -39,16 +39,6 @@ class CardsScreen extends React.Component {
     selectedDeck: PropTypes.object.isRequired,
   }
 
-  // Define StackNavigator options for the screen
-  static navigationOptions = {
-    title: 'Cards',
-    headerTintColor: white,
-    headerStyle: {
-      backgroundColor: primary,
-      marginTop: -Constants.statusBarHeight,
-    }
-  }
-
   // Define state to toggle cards list visibility
   state = {
     showCardsList: false

@@ -31,16 +31,6 @@ class AddDeckScreen extends React.Component {
     numOfDecks: PropTypes.number.isRequired,
   }
 
-  // Define StackNavigator options for the screen
-  static navigationOptions = {
-    title: 'Add Deck',
-    headerTintColor: white,
-    headerStyle: {
-      backgroundColor: primary,
-      marginTop: -Constants.statusBarHeight,
-    }
-  }
-
   // Define state to control user input
   state = {
     inputText: '',

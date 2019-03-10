@@ -41,16 +41,6 @@ class QuizScreen extends React.Component {
     selectedDeck: PropTypes.object.isRequired,
   }
 
-  // Define StackNavigator options for the screen
-  static navigationOptions = {
-    title: 'Quiz',
-    headerTintColor: white,
-    headerStyle: {
-      backgroundColor: primary,
-      marginTop: -Constants.statusBarHeight,
-    }
-  }
-
   // Define state to control quiz
   state = {
     cardSize: { height: 0, width: 0 },

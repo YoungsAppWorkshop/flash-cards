@@ -31,16 +31,6 @@ class AddCardScreen extends React.Component {
     selectedDeckId: PropTypes.string.isRequired,
   }
 
-  // Define StackNavigator options for the screen
-  static navigationOptions = {
-    title: 'Add Card',
-    headerTintColor: white,
-    headerStyle: {
-      backgroundColor: primary,
-      marginTop: -Constants.statusBarHeight,
-    }
-  }
-
   // Define state to control user inputs
   state = {
     cardForm: { answer: '', question: '' },
